@@ -1,0 +1,24 @@
+<script>
+    function Dog(name, breed, weight) {
+        this.name = name;
+        this.breed = breed;
+        this.weight = weight;
+
+    }
+    var floida = new Dog("Floida", "rottweiler", 35);
+    var bobik = new Dog("Bobik", "Mixed", 18);
+    var laika = new Dog("Laika", "Chihuahua", 5);
+
+    var dogs = [floida, bobik, laika];
+
+    for (var i = 0; i < dogs.length; i++) {
+        var size;
+        if (dogs[i].weight > 20) {
+            size = "large";
+            console.log("This breed of dogs is " + size);
+        } else {
+            size = "small";
+            console.log("This breed of dogs is " + size);
+        }
+    }
+</script>
