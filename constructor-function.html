@@ -1,15 +1,22 @@
 <script>
+    var floida = new Dog("Floida", "rottweiler", 35);
+    var bobik = new Dog("Bobik", "Mixed", 18);
+    var laika = new Dog("Laika", "Chihuahua", 5);
+    var jessica = new Dog("jessica", "bulldog", 10);
+    var dogs = [floida, bobik, laika, jessica];
+
     function Dog(name, breed, weight) {
         this.name = name;
         this.breed = breed;
         this.weight = weight;
-
+        this.bark = function () {
+            if (this.weight > 5) {
+                console.log(this.name +" barks WOOOOOF");
+            } else {
+                console.log(this.name +" barks Yuiiiiip");
+            }
+        }
     }
-    var floida = new Dog("Floida", "rottweiler", 35);
-    var bobik = new Dog("Bobik", "Mixed", 18);
-    var laika = new Dog("Laika", "Chihuahua", 5);
-
-    var dogs = [floida, bobik, laika];
 
     for (var i = 0; i < dogs.length; i++) {
         var size;
@@ -20,5 +27,6 @@
             size = "small";
             console.log("This breed of dogs is " + size);
         }
+        dogs[i].bark();
     }
 </script>
