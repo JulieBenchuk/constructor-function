@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    function Car(model, year, color, semitrailer, mileage) {
+        this.model = model;
+        this.year = year;
+        this.color= color;
+        this.semitrailer = semitrailer;
+        this.mileage = mileage;
+        this.started = false;
+        this.start = function () {
+            this.started = true;
+        };
+        this.stop = function () {
+            this.started = false;
+        };
+        this.drive = function () {
+            if (this.started===false) {
+                console.log("You need to start the engine first!");
+            } else {
+                console.log("Wroom-wrooom!!!");
+            }
+        }
+    }
+
+    let smitz = new Car("Smitz", 2017, "red", true, 10000);
+    let kogel = new Car("Kogel", 2020, "black", false, 3000);
+    let man = new Car("Man",2015, "white", true, 20000);
+    let volkswagen = new Car("Volkswagen", 2010, "golden", false, 50000);
+    let cars = [smitz, kogel, man, volkswagen];
+
+    for (var i = 0; i < cars.length; i++) {
+        cars[i].drive();
+    }
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
